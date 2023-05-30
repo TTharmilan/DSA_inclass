@@ -35,13 +35,16 @@ void dijkstra(int graph[V][V], int source) {
             }
         }
     }
-
+    float total=0;
     cout << "source city= " << source << "\n";
     for (int j = 0; j < V; j++) {
+        total=total+distances[j];
         if(j!=source){
             cout << source<<"--->" << j << "   " << distances[j] << "\n";
         }
     }
+    float avg=total/(V-1);
+    cout<<"Average time taken = "<<avg<<endl;
 }
 
 int main() {
